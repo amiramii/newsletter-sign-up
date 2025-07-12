@@ -35,8 +35,8 @@ Users should be able to:
 ![mobile-succes](image-3.png)
 
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL ](https://github.com/amiramii/newsletter-sign-up.git)
+- Live Site URL: [live site URL ](https://amiramii.github.io/newsletter-sign-up/)
 
 ## My process
 
