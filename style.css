@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg-color:hsl(0, 0%, 100%);
+    --primary-text-color:hsl(234, 29%, 20%);
+    --error-msg-color: hsl(4, 100%, 67%);
+    --Blue-700: hsl(235, 18%, 26%);
+    --Grey: hsl(0, 0%,58%);
+    --primary-fs:1rem;
+    --fw-400:400;
+    --fw-700:700;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    font-family: 'Roboto',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: var(--fw-400);
+    font-size: var(--primary-fs);
+    background-color: var(--bg-color);
+    width: auto;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin: auto;
+    width: min-content;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    align-items: center;
+   
+}
+.illustration-sign-up{
+    object-fit: cover;
+    align-self: center;
+    text-align: center;
+    overflow-x: hidden;
+    justify-self: center;
+
+
+}
+.sign-up-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.8rem;
+} 
+
+li{
+    list-style-image: url(./assets/images/icon-list.svg);
+
+    font-size: 2ch;
+    margin-inline-start: 3rem;
+    line-height: 1.7;
+    padding-inline-start: 1rem;
+
+
+}
+.header{
+    font-size: 3rem;
+    margin-inline-start: 1rem;
+}
+.content{
+    font-size: 1.2rem;
+    text-wrap: wrap;
+    width: 30ch;
+    margin-inline-start: 1rem;
+}
+.submit-form label{
+    font-weight: var(--fw-700);
+    margin-inline-start: 1rem;
+}
+#email-address{
+    all: unset;
+    width:90%;
+    height: 1rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--Grey);
+    padding: 1rem;
+    color: var(--Grey);
+    border-radius: 0.5rem;
+    align-self: start;
+    justify-self: start;
+    margin-block-start: 1rem;
+    
+}
+.input-error{
+    border: 1px solid var(--error-msg-color) !important;
+    color: var(--error-msg-color) !important;
+    background-color: rgb(235, 149, 149) !important;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    position: relative;
+    
+}
+.submit-button{
+    all: unset;
+    font-family: 'Roboto',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--bg-color);
+    background-color: var(--primary-text-color);
+    height: 1rem;
+    padding: 1rem;
+    width: 90%;
+    border-radius: 0.5rem;
+    align-self: start;
+    justify-self: start;
+    text-align: center;
+    cursor: pointer;
+}
+.submit-button:hover{
+    background: linear-gradient(to right,rgb(254, 98, 75),rgb(254, 176, 75)) !important;
+    box-shadow: -4px 4px 10px 1px rgb(254, 98, 75),
+                2px 4px 10px 4px rgb(254, 176, 75);
+}
+.submit-button:focus{
+    background: linear-gradient(to right,rgb(254, 98, 75),rgb(254, 176, 75)) !important;
+    box-shadow: -4px 4px 10px 1px rgb(254, 98, 75),
+                2px 4px 10px 4px rgb(254, 176, 75);
+}
+.email-error{
+ position: absolute;
+ top: 52%;
+ left: 0;
+ color: var(--error-msg-color);
+}
+.success-dialog{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    z-index: 100;
+    display: none; 
+    flex-direction: column;
+    padding: 20% 4rem;
+    row-gap: 2rem;
+    border: none;
+}
+.success-dialog.show{
+    display: flex;
+}
+.icon-success img{
+    width: 20%;
+    aspect-ratio: 1/1;
+    height: auto;
+}
+.success-dialog-header{
+    font-weight: var(--fw-700);
+    font-size: 3rem;
+}
+.success-dialog-message{
+    font-weight: var(--fw-400);
+    line-height: 1.5;
+    width: 35ch;
+}
+dialog button{
+    all: unset;
+    background-color: var(--primary-text-color);
+    color: var(--bg-color);
+    font-weight: var(--fw-700);
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    border-radius: 0.5rem;
+    margin-block-start: 50%;
+    cursor: pointer;
+}
+dialog button:hover{
+    background: linear-gradient(to right,rgb(254, 98, 75),rgb(254, 176, 75)) !important;
+    box-shadow: -4px 4px 10px 1px rgb(254, 98, 75),
+                2px 4px 10px 4px rgb(254, 176, 75);
+}
+dialog button:focus{
+    background: linear-gradient(to right,rgb(254, 98, 75),rgb(254, 176, 75)) !important;
+    box-shadow: -4px 4px 10px 1px rgb(254, 98, 75),
+                2px 4px 10px 4px rgb(254, 176, 75);
+}
+.attribution { font-size: 11px; text-align: center; padding: 1rem;}
+.attribution a { color: var(--error-msg-color) }
+@media screen and (min-width:50rem) {
+    body{
+        background-color: var(--Blue-700);
+    }
+    .flex-container{
+        flex-direction: row;
+        width: min-content;
+        min-height: unset;
+        min-height: max-content;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .illustration-sign-up{
+        object-fit: cover;
+        order: 2;
+        width: 100%;
+    }
+    .sign-up-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.8rem;
+        padding:2rem;
+        flex: 1;
+    } 
+    #email-address{
+        width:80%;
+        align-self:start;
+    }
+    .submit-button{
+        width: 80%;
+        align-self: start;
+    }
+    .success-dialog{
+        position: absolute;
+        width:min-content;
+        min-height: unset;
+        height: min-content;
+        align-self: center;
+        justify-self: center;
+        flex-direction: column;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    dialog button{
+        margin-block-start:0;
+    }
+    .attribution { color: var(--bg-color);}
+}
